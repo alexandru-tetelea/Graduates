@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">org.postgresql.Driver</property>
+		<property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+		<property name="connection.username">postgres</property>
+		<property name="connection.password">password</property>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+		<property name="show_sql">true</property>
+
+		<mapping class="com.endava.model.Person" />
+		<mapping class="com.endava.model.Training" />
+		<mapping class="com.endava.model.Course" />
+		<mapping class="com.endava.model.Observations" />
+		<mapping class="com.endava.model.Discipline" />
+
+
+	</session-factory>
+</hibernate-configuration>
